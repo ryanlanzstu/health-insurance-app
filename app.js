@@ -1,11 +1,11 @@
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
-var cookieParser = require('path');
+var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var indexRouter = require ('./routes/index');
-var quoteRouter = require ('/routes/quotes');
+var quoteRouter = require ('./routes/quotes');
 
 var app = express();
 
@@ -20,7 +20,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/quotes');
+app.use('/quotes', quoteRouter);
 
 //handle 404
 app.use(function(req, res, next){

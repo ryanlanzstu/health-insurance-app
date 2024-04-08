@@ -1,6 +1,5 @@
 var express = require('express');
 var router = express.Router();
-var utils = require('../modules/utils')
 
 /* Import calculation module */
 const insuranceCalculator = require('../modules/insuranceCalculator');
@@ -13,7 +12,7 @@ router.get('/', (req, res, next) => {
 /* GET home page */
 router.post('/', (req, res, next) => {
     //Get data
-    const {age, q1, q2, q3, q5} = req.body;
+    const {age, q1, q2, q3, q4, q5} = req.body;
     //Convert answers
     const answers = {
         q1: q1 ==='yes',
@@ -29,3 +28,6 @@ router.post('/', (req, res, next) => {
     //Render quote
     res.render('quoteResult', {title: 'Your Personalized Quote:', quote});
 });
+
+module.exports = router;
+
