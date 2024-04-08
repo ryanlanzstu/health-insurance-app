@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css'>
+</head>
+<body>
+    <h1><%= title %></h1>
+    <form action="/quote" method="post">
+        <div>
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required>
+        </div>
+        <div>
+            <label for="question1">Do you smoke? (yes/no):</label>
+            <input type="text" id="question1" name="question1" required>
+        </div>
+        <div>
+            <label for="question2">How many days a week do you exercise?:</label>
+            <input type="number" id="question2" name="question2" required>
+        </div>
+        <div>
+            <label for="question3">Do you have any chronic diseases? (yes/no):</label>
+            <input type="text" id="question3" name="question3" required>
+        </div>
+        <div>
+            <label for="question4">Do you drink?:</label>
+            <input type="number" id="question4" name="question4" required>
+        </div>
+        <div>
+            <label for="question5">Is there a history of critical illness in your family? (yes/no):</label>
+            <input type="text" id="question5" name="question5" required>
+        </div>
+        <button type="submit">Get Quote</button>
+    </form>
+</body>
+</html>
