@@ -26,7 +26,7 @@ router.post('/', (req, res, next) => {
     const quote= insuranceCalculator.calculate(age, answers);
 
     //Render quote
-    res.render('quoteResult', {title: 'Your Personalized Quote:', quote});
+    res.render('quotePrice', {title: 'Your Personalized Quote:', quote});
 });
 
 module.exports = router;
